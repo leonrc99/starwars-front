@@ -1,0 +1,28 @@
+.data-list {
+  margin: 20px 80px;
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      text-align: left;
+    }
+  }
+
+  p {
+    font-style: italic;
+    color: #888;
+  }
+}

@@ -1,0 +1,37 @@
+$form-color: #333;
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightgray;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $form-color;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      border: 1px solid $form-color;
+      border-radius: 3px;
+    }
+  }
+
+  button {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: white;
+    background-color: $form-color;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
