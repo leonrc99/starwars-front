@@ -33,10 +33,8 @@ const PersonsForm: React.FC = () => {
             });
 
             if (response.status === 200) {
-                // Sucesso! Você pode adicionar o código aqui para lidar com o envio bem-sucedido do formulário.
                 console.log('Formulário enviado com sucesso!');
             } else {
-                // Algo deu errado. Você pode adicionar o código aqui para lidar com o erro.
                 console.error('Erro ao enviar o formulário.');
             }
         } catch (error) {
@@ -45,91 +43,94 @@ const PersonsForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="form-div">
             <form className="form" onSubmit={handleSubmit}>
-                <h2>Meu Formulário</h2>
-                <label>
-                    Nome:
+                <h2 className="title">Cadastro de Personagens</h2>
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="name"
+                        placeholder="Nome"
                         value={formData.name}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Altura:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="height"
+                        placeholder="Altura"
                         value={formData.height}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Peso:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="mass"
+                        placeholder="Peso"
                         value={formData.mass}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Cor do Cabelo:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="hair_color"
+                        placeholder="Cor do cabelo"
                         value={formData.hair_color}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Cor do Olho:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="eye_color"
+                        placeholder="Cor do olho"
                         value={formData.eye_color}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Ano de Nascimento:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="birth_year"
+                        placeholder="Ano de nascimento"
                         value={formData.birth_year}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Gênero:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="gender"
+                        placeholder="Gênero"
                         value={formData.gender}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Planeta Natal:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="homeworld"
+                        placeholder="Mundo natal"
                         value={formData.homeworld}
                         onChange={handleChange}
                     />
-                </label>
-                <label>
-                    Imagem de Perfil:
+                
                     <input
+                        className="form-input"
                         type="text"
                         name="profile_image"
+                        placeholder="Imagem de perfil"
                         value={formData.profile_image}
                         onChange={handleChange}
                     />
-                </label>
-                <button type="submit">Enviar</button>
+                
+                <div className="btn">
+                    <input type="submit" name="botao" value="Enviar" className="btn-submit" />
+                </div>
             </form>
         </div>
     );

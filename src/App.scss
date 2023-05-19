@@ -1,37 +1,27 @@
-$form-color: #333;
+body {
+  background-color: #0C0C0C;
+}
 
-.form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: lightgray;
+.principal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
-  h2 {
-    margin-bottom: 20px;
-  }
+input[type=submit] {
+  padding: 15px 20px;
+  margin-top: 10px;
+  color: #0C0C0C;
+  background-color: #7E7E7E;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.4s;
+}
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-    color: $form-color;
-
-    input {
-      display: block;
-      width: 100%;
-      padding: 5px;
-      border: 1px solid $form-color;
-      border-radius: 3px;
-    }
-  }
-
-  button {
-    display: block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    color: white;
-    background-color: $form-color;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+input[type=submit]:hover {
+  background-color: #FCFCFE;
 }

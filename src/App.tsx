@@ -1,14 +1,11 @@
 import './App.scss';
 import PersonsForm from './persons/form/PersonsForm';
-import PersonsList from './persons/list/PersonsList';
 
 function App() {
   return (
-    <>
+    <div className='principal'>
       < PersonsForm />
-      <hr />
-      < PersonsList />
-    </>
+    </div>
   );
 }
 
