@@ -33,12 +33,23 @@ const PersonsForm: React.FC = () => {
             });
 
             if (response.status === 200) {
-                console.log('Formulário enviado com sucesso!');
-            } else {
-                console.error('Erro ao enviar o formulário.');
+                setFormData({
+                    name: '',
+                    height: '',
+                    mass: '',
+                    hair_color: '',
+                    eye_color: '',
+                    birth_year: '',
+                    gender: '',
+                    homeworld: '',
+                    profile_image: ''
+                })
+
+                alert('Formulário enviado com sucesso!');
             }
         } catch (error) {
-            console.error('Erro ao enviar o formulário:', error);
+            alert('Erro ao enviar o formulário.');
+            console.error('Erro ao enviar o formulário: ', error);
         }
     };
 
