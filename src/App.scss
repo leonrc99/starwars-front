@@ -1,5 +1,7 @@
 body {
-  background: no-repeat center/100% url("../public/assets/imgs/bg.webp");
+  font-family: 'Star Wars', sans-serif;
+  background-image: url("../public/assets/imgs/bg.webp");
+  background-size: cover;
   background-color: #0C0C0C;
 }
 
@@ -18,10 +20,11 @@ body {
 }
 
 input[type=submit] {
+  font-family: 'Star Wars', sans-serif;
   padding: 15px 20px;
   margin-top: 10px;
-  color: #001A8F;
-  background-color: #FFF;
+  color: #1f1e1e;
+  background-color: #DBA90D;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -30,5 +33,5 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #DBA90D;
+  background-color: #FFC929;
 }

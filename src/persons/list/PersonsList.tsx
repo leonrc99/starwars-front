@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './PersonsList.scss';
+import DATA_MOCK from '../../data/mock';
 
 interface Data {
     id: number;
@@ -32,7 +33,7 @@ function PersonsList() {
     return (
         <div className="data-list">
             <h2>Lista de Dados</h2>
-            {dataList.length > 0 ? (
+            {DATA_MOCK.length > 0 ? (
                 <table>
                     <thead>
                         <tr>
@@ -41,7 +42,7 @@ function PersonsList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {dataList.map((data) => (
+                        {DATA_MOCK.map((data) => (
                             <tr key={data.id}>
                                 <td>{data.name}</td>
                                 <td>{data.gender}</td>

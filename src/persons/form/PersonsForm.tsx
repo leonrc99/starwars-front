@@ -56,7 +56,7 @@ const PersonsForm: React.FC = () => {
     return (
         <div className="form-div">
             <form className="form" onSubmit={handleSubmit}>
-                <h2 className="title">Cadastro de Personagens</h2>
+                <h2 className="title">Cadastro de <br />Personagens</h2>
                 
                     <input
                         className="form-input"
