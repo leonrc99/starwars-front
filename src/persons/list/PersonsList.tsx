@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './PersonsList.scss';
-import DATA_MOCK from '../../data/mock';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export interface Data {
-    id: number;
+    _id: number;
     name: string;
     gender: string;
 }
@@ -53,7 +52,7 @@ function PersonsList() {
     return (
         <div className="data-list">
             <h2 className='title-table'>Lista de Personagens</h2>
-            {DATA_MOCK.length > 0 ? (
+            {dataList.length > 0 ? (
                 <table className='persons-table'>
                     <thead>
                         <tr>
@@ -64,18 +63,21 @@ function PersonsList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {DATA_MOCK.map((data) => (
-                            <tr className='item' key={data.id}>
+                        {dataList.map((data) => (
+                            
+                            <tr className='item' key={data._id}>
+                                <td className='item-info'>{data._id}</td>
                                 <td className='item-info'>{data.name}</td>
                                 <td className='item-info'>{data.gender}</td>
                                 <td className='item-edit'> <FontAwesomeIcon icon={faPenToSquare} /> </td>
                                 <td className='item-delete'>
-                                    <FontAwesomeIcon icon={faTrash} onClick={() => deleteItem(data.id)} />
+                                    <FontAwesomeIcon icon={faTrash} onClick={() => deleteItem(data._id)} />
                                 </td>
                             </tr>
-                        ))}
+                        )
+                        )}
                     </tbody>
-                </table>                
+                </table>           
             ) : (
                 <p className='not-found'>Nenhum dado encontrado.</p>
             )}
